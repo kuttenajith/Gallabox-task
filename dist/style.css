@@ -1,0 +1,106 @@
+#root {
+  padding: 20px;
+  background-color: #f8fafa;
+  height: 100vh;
+}
+
+#task {
+  height: 100%;
+  width: 600px;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 0.1fr 0.1fr 1.8fr;
+  grid-gap: 1rem 0;
+  grid-template-areas: "Title" "Add" "List";
+}
+
+#taskTitle {
+  grid-area: Title;
+}
+
+#taskCreate {
+  grid-area: Add;
+}
+
+#toDoList {
+  grid-area: List;
+  padding: 0 10px;
+  overflow-y: auto;
+}
+
+.list-group-item-action {
+  min-height: 57px;
+  margin: 6px;
+}
+.list-group span {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+a span {
+  margin-top: 3px;
+  padding: 2px;
+}
+a span:hover {
+  cursor: text;
+}
+a span:focus {
+  box-shadow: none;
+  outline: none;
+  background-color: white;
+  padding-bottom: 0px;
+  border-bottom: 2px solid #764abc;
+}
+a .btn-group {
+  display: none;
+}
+a:hover span {
+  background-color: white;
+  padding-bottom: 0px;
+  border-bottom: 2px solid #764abc;
+}
+a:hover .btn-group {
+  display: block;
+}
+.taskheader {
+  font-size: 26px;
+}
+.btn-group {
+  justify-content: inherit;
+  border-radius: 0.4em;
+}
+
+.btn-primary {
+  background-color: #764abc;
+  border-color: #764abc;
+  border-radius: 12% !important;
+}
+.btn-primary:hover {
+  background-color: #fff;
+  color: #40216f;
+  border-color: #40216f;
+}
+.btn-primary:focus {
+  box-shadow: 0 0 0 0.2rem rgba(118, 74, 188, 0.25);
+}
+
+.form-control {
+  border-color: #764abc;
+}
+.form-control:focus {
+  border-color: #764abc;
+  box-shadow: 0 0 0 0.2rem rgba(118, 74, 188, 0.25);
+}
+
+.btn-outline-primary {
+  color: #764abc;
+  border-color: #764abc;
+}
+.btn-outline-primary:hover {
+  background-color: #40216f;
+  border-color: #40216f;
+}
+.btn-outline-primary:focus {
+  box-shadow: 0 0 0 0.2rem rgba(118, 74, 188, 0.25);
+}
